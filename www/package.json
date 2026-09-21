@@ -27,7 +27,7 @@
     "@angular/router": "22.1.6",
     "@cypress/code-coverage": "^4.0.3",
     "@nestjs/common": "^11.1.28",
-    "@nestjs/core": "^11.1.28",
+    "@nestjs/core": "^11.2.5",
     "@nestjs/platform-express": "^11.1.28",
     "@nx/angular": "23.2.1",
     "casper-rust-wasm-sdk": "file:../casper-rust-wasm-sdk/pkg",
