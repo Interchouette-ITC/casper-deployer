@@ -105,7 +105,7 @@
   },
   "overrides": {
     "smol-toml": "^1.8.0",
-    "multer": "^2.3.0",
+    "multer": "^2.4.0",
     "svgo": "^4.0.3",
     "image-size": "^2.0.2",
     "less": "^4.9.1",
