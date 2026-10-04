@@ -24,7 +24,7 @@
     "@angular/forms": "22.1.7",
     "@angular/platform-browser": "22.1.7",
     "@angular/platform-browser-dynamic": "22.1.7",
-    "@angular/router": "22.1.7",
+    "@angular/router": "22.2.0",
     "@cypress/code-coverage": "^4.0.3",
     "@nestjs/common": "^11.1.28",
     "@nestjs/core": "^11.2.5",
