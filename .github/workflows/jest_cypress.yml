@@ -26,7 +26,7 @@ jobs:
           npm_config_loglevel: error
 
       - name: npm audit (high+)
-        run: npm audit --audit-level=high
+        run: node scripts/npm-audit-ci.mjs
 
       - name: Install Cypress binary
         run: npx cypress install
