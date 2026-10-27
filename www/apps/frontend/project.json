@@ -39,6 +39,7 @@
           }
         ],
         "styles": [
+          "apps/frontend/src/tailwind.css",
           "apps/frontend/src/styles.scss",
           "./node_modules/highlight.js/styles/lightfair.css",
           "./node_modules/toastr/build/toastr.min.css"
