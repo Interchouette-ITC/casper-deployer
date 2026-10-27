@@ -7,21 +7,13 @@
   "tags": ["ui-header"],
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/ui/header"],
       "options": {
-        "jestConfig": "libs/ui/header/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/ui/header/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": [
-          "libs/ui/header/**/*.ts",
-          "libs/ui/header/**/*.html"
-        ]
+        "args": ["**/*.ts", "**/*.html"]
       }
     }
   }

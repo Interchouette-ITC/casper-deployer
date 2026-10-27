@@ -5,18 +5,6 @@
   "prefix": "lib",
   "projectType": "library",
   "tags": [],
-  "targets": {
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "options": {
-        "jestConfig": "libs/util/services/deploy/jest.config.ts",
-        "tsConfig": "libs/util/services/deploy/tsconfig.spec.json"
-      }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
-    }
-  }
+  "// targets": "to see all targets run: nx show project util-services-deploy --web",
+  "targets": {}
 }

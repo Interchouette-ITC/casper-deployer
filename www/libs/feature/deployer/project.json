@@ -7,21 +7,13 @@
   "tags": ["feature deployer"],
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/feature/deployer"],
       "options": {
-        "jestConfig": "libs/feature/deployer/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/feature/deployer/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": [
-          "libs/feature/deployer/**/*.ts",
-          "libs/feature/deployer/**/*.html"
-        ]
+        "args": ["**/*.ts", "**/*.html"]
       }
     }
   }

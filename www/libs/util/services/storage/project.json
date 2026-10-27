@@ -7,21 +7,17 @@
   "tags": ["utils storage"],
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/util/services/storage"],
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/util/services/storage",
+        "{workspaceRoot}/libs/coverage/libs/util/services/storage"
+      ],
       "options": {
-        "jestConfig": "libs/util/services/storage/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/util/services/storage/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": [
-          "libs/util/services/storage/**/*.ts",
-          "libs/util/services/storage/**/*.html"
-        ]
+        "args": ["**/*.ts", "**/*.html"]
       }
     }
   }

@@ -6,21 +6,14 @@
   "tags": ["data-access-deployer"],
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/data-access/deployer"],
       "options": {
-        "jestConfig": "libs/data-access/deployer/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/data-access/deployer/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": [
-          "libs/data-access/deployer/**/*.ts",
-          "libs/data-access/deployer/**/*.html"
-        ]
+        "args": ["**/*.ts", "**/*.html"]
       }
     }
   }
