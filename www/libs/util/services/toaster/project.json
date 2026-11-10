@@ -7,21 +7,13 @@
   "tags": ["util toaster"],
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/util/services/toaster"],
       "options": {
-        "jestConfig": "libs/util/services/toaster/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/util/services/toaster/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": [
-          "libs/util/services/toaster/**/*.ts",
-          "libs/util/services/toaster/**/*.html"
-        ]
+        "args": ["**/*.ts", "**/*.html"]
       }
     }
   }

@@ -7,21 +7,13 @@
   "tags": ["argument"],
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/ui/argument"],
       "options": {
-        "jestConfig": "libs/ui/argument/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/ui/argument/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": [
-          "libs/ui/argument/**/*.ts",
-          "libs/ui/argument/**/*.html"
-        ]
+        "args": ["**/*.ts", "**/*.html"]
       }
     }
   }

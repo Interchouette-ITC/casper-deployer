@@ -7,18 +7,13 @@
   "tags": [],
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/ui/tabs"],
       "options": {
-        "jestConfig": "libs/ui/tabs/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/ui/tabs/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["libs/ui/tabs/**/*.ts", "libs/ui/tabs/**/*.html"]
+        "args": ["**/*.ts", "**/*.html"]
       }
     }
   }

@@ -1,3 +1,5 @@
+@reference "../../../../../../apps/frontend/src/tailwind.css";
+
 :host {
   @apply flex grow justify-between;
   box-shadow: rgb(0 0 0 / 12%) 0px 1px 4px;
@@ -8,9 +10,9 @@ a {
 }
 
 button {
-  @apply font-bold my-2 py-1 px-4 mr-8 rounded bg-casper text-white bg-opacity-75;
+  @apply font-bold my-2 py-1 px-4 mr-8 rounded bg-casper/75 text-white;
   &:hover {
-    @apply bg-opacity-100;
+    @apply bg-casper;
   }
 }
 

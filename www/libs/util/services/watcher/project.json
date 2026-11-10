@@ -7,21 +7,13 @@
   "tags": ["util watcher"],
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/util/services/watcher"],
       "options": {
-        "jestConfig": "libs/util/services/watcher/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/util/services/watcher/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": [
-          "libs/util/services/watcher/**/*.ts",
-          "libs/util/services/watcher/**/*.html"
-        ]
+        "args": ["**/*.ts", "**/*.html"]
       }
     }
   }

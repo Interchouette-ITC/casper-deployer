@@ -7,21 +7,13 @@
   "tags": ["routeur-hub"],
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/util/services/routeur-hub"],
       "options": {
-        "jestConfig": "libs/util/services/routeur-hub/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/util/services/routeur-hub/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": [
-          "libs/util/services/routeur-hub/**/*.ts",
-          "libs/util/services/routeur-hub/**/*.html"
-        ]
+        "args": ["**/*.ts", "**/*.html"]
       }
     }
   }

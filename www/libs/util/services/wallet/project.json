@@ -7,21 +7,13 @@
   "tags": ["util wallet"],
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/util/services/wallet"],
       "options": {
-        "jestConfig": "libs/util/services/wallet/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/util/services/wallet/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": [
-          "libs/util/services/wallet/**/*.ts",
-          "libs/util/services/wallet/**/*.html"
-        ]
+        "args": ["**/*.ts", "**/*.html"]
       }
     }
   }

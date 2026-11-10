@@ -39,6 +39,7 @@
           }
         ],
         "styles": [
+          "apps/frontend/src/tailwind.css",
           "apps/frontend/src/styles.scss",
           "./node_modules/highlight.js/styles/lightfair.css",
           "./node_modules/toastr/build/toastr.min.css"
@@ -108,18 +109,13 @@
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["apps/frontend/**/*.ts", "apps/frontend/**/*.html"]
+        "args": ["**/*.ts", "**/*.html"]
       }
     },
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/apps/frontend"],
       "options": {
-        "jestConfig": "apps/frontend/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "apps/frontend/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     }
   }
