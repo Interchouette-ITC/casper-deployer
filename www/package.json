@@ -8,10 +8,10 @@
     "start": "npm run start:dev",
     "start:dev": "nx run-many --target=serve --projects=api,frontend --parallel",
     "start:prod": "nx run-many --target=serve --projects=api,frontend --parallel --configuration=production",
-    "build": "nx run-many --target=build --projects=api,frontend --parallel --cloud=false && cp server.js dist/server.js",
+    "build": "nx run-many --target=build --projects=api,frontend --parallel --configuration=production --cloud=false && cp server.js dist/server.js",
     "test": "nx run-many --target=test --all --parallel --cloud=false",
     "serve:api": "node dist/apps/api/main.js",
-    "serve": "node dist/server.js & node dist/apps/api/main.js",
+    "serve": "node dist/server.js & node dist/apps/api/main.*.js",
     "e2e": "nx run api:serve & nx run frontend-e2e:e2e --skip-nx-cache && killall node",
     "cypress": "cypress open --e2e -b chrome -P apps/frontend-e2e"
   },

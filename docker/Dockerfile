@@ -1,6 +1,6 @@
 # Build from repository root:
 #   docker build -f docker/Dockerfile -t casper-deployer .
-FROM --platform=linux/amd64 node:24-alpine AS build
+FROM node:24-alpine AS build
 WORKDIR /app
 
 COPY casper-rust-wasm-sdk ./casper-rust-wasm-sdk
@@ -12,9 +12,11 @@ RUN npm ci
 
 COPY www ./
 ENV PORT=4242
-RUN npm run build
+RUN npm run build && \
+    test -f dist/server.js && \
+    test -n "$(find dist/apps/api -maxdepth 1 -name 'main.*.js' -print -quit)"
 
-FROM --platform=linux/amd64 node:24-alpine AS production
+FROM node:24-alpine AS production
 WORKDIR /app/www
 
 COPY --from=build /app/www/dist ./dist
