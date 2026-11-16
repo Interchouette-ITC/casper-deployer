@@ -66,7 +66,7 @@
     "@nx/eslint-plugin": "24.0.2",
     "@nx/js": "24.0.6",
     "@nx/nest": "24.0.2",
-    "@nx/node": "24.0.2",
+    "@nx/node": "24.0.6",
     "@nx/web": "24.0.2",
     "@nx/webpack": "24.0.2",
     "@nx/workspace": "24.0.6",
