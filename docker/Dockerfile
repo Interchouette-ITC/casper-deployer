@@ -20,18 +20,11 @@ FROM node:24-alpine AS production
 WORKDIR /app/www
 
 COPY --from=build /app/www/dist ./dist
-COPY --from=build /app/www/package.json ./package.json
+COPY --from=build /app/www/package.json /app/www/package-lock.json /app/www/decorate-angular-cli.js ./
 
-# Install runtime npm deps first (file: entries become broken symlinks here).
-RUN npm install --omit=dev --no-fund --no-audit \
-  @nestjs/common \
-  @nestjs/core \
-  @nestjs/platform-express \
-  express \
-  http-proxy-middleware \
-  reflect-metadata \
-  rxjs \
-  tslib \
+# Keep runtime dependencies on the same lockfile as the build stage.
+# Local file: entries become broken symlinks here.
+RUN npm ci --omit=dev --no-fund --no-audit \
   && rm -rf ./node_modules/casper-rust-wasm-sdk \
             ./node_modules/casper-rust-wasm-sdk-nodejs \
             ./node_modules/deployer

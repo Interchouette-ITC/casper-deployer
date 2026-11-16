@@ -87,6 +87,9 @@ make docker-build-dev
 docker run --rm -p 4242:4242 -e PORT=4242 interchouette/casper-deployer:dev
 ```
 
+Both Docker stages use `www/package-lock.json` with `npm ci`; the production
+stage omits development dependencies without resolving newer package versions.
+
 Published images (Docker Hub):
 
 - [`interchouette/casper-deployer`](https://hub.docker.com/r/interchouette/casper-deployer) (`:dev`, version tags, `:latest`)
