@@ -63,7 +63,7 @@
     "@nestjs/testing": "^11",
     "@nx/cypress": "24.0.2",
     "@nx/eslint": "24.0.2",
-    "@nx/eslint-plugin": "24.0.2",
+    "@nx/eslint-plugin": "24.0.6",
     "@nx/js": "24.0.6",
     "@nx/nest": "24.0.2",
     "@nx/node": "24.0.6",
