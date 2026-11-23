@@ -93,6 +93,7 @@
     "jest-preset-angular": "17.0.3",
     "jsonc-eslint-parser": "^3.3.0",
     "nx": "24.0.6",
+    "patch-package": "^8.0.1",
     "postcss": "^8.5.33",
     "prettier": "^3.10.1",
     "tailwindcss": "^4.3.5",
